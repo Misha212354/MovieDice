@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Movie Decider</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+       
+    </head>
+    <body class="body">
+        
+        <div class="entire-div">
+            <div class="left-side">
+
+                <form method="post" action="http://127.0.0.1:8000/playground/crit/">
+                    <div class="options"> 
+                        <p class="op">Options</p>
+                    </div>
+
+                    <div class="frm" style="font-family: 'Nunito', sans-serif;">
+                        {% csrf_token %}
+                        <p>Movie or Series {{ form.movie_series }}</p> 
+                        <p>Genre {{ form.genre }}</p>
+                        <p>Year {{ form.year }}</p>
+                        <p>Rating {{ form.rating }}</p>
+                    </div>
+                    <div>
+                        <button class="apply-button", type="submit", name="apply" >Apply</button>
+                    </div>
+                    
+                    
+                </form>
+                <br>
+
+                
+
+            </div>
+            <div class="right-side">
+                <div class="top-part"><p class="rsd" >{{r}}</p></div>
+                <div class="bottom-part">
+                    <div class="info">
+                        <div class="pic">
+                            <image onerror="this.style.display='none'" class="pic-img" src={{cover}}></image>
+                        </div>
+                        <div class="nrg-info">
+                            <p class="rsd">{{title}}</p>
+                            <p class="rsd">{{year}}</p>
+                            <p class="rsd">{{genre}}</p>
+                            <p class="rsd">{{rating}}</p> 
+                        </div>
+                    </div>
+                    <div class="plot">
+                        <p class="pp">{{plot}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+
+</html>
+
+
+
+
