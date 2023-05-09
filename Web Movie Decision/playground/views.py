@@ -25,10 +25,8 @@ def crit(response):
                 generator.get_tv_shows()
 
             generator.year_rating_clean()
-            chosen = generator.make_choice()
 
-            
-            #data = g.Generator(movie_series, genre, year, rating).
+            chosen = generator.make_choice()
 
             title = chosen[0]
             year = chosen[1]
