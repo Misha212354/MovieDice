@@ -60,7 +60,13 @@ class Generator:
             if n.get("year") != None and n.get("rating") != None and len(n["genre"]) != 0:
                 if n["year"] == self.year and n["year"] <= date.today().year and n["rating"] >= self.rating and self.genre in np.char.lower(n["genre"]):
                     new_list.append(n)
-        
+
+        if(len(new_list) == 0):
+            for n in self.list:
+                if n.get("year") != None and n.get("rating") != None and len(n["genre"]) != 0:
+                    if n["year"] >= self.year and n["year"] <= date.today().year and n["rating"] >= self.rating and self.genre in np.char.lower(n["genre"]):
+                        new_list.append(n)
+
         self.list = new_list
 
     def make_choice(self):
