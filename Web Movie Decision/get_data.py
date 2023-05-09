@@ -86,7 +86,7 @@ class Generator:
             else:
                 return chosen_movie["title"], chosen_movie["year"], ', '.join([str(element) for element in chosen_movie['genre']]), chosen_movie["rating"], "No plot available", url, "We recommend"
         else:
-            return "No title", "No year", "No genre", "No rating", "No plot", "No url", "We recommend"
+            return "", "", "", "", "", "", "No movie fits the criteria"
         
 
 

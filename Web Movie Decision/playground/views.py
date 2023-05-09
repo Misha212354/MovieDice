@@ -4,9 +4,12 @@ from django.views.generic import TemplateView
 from .forms import Info
 from get_data import Generator as Generator
 import socket
+from django.shortcuts import redirect
+
+
 socket.setdefaulttimeout(150 * 6000)
 
-def crit(response):
+def find_movies(response):
     if response.method == "POST":
         form = Info(response.POST)
 
@@ -47,3 +50,6 @@ def crit(response):
     else:    
         form = Info()
     return render(response, "WMD.html", {"form":form})
+
+def welcome_view(request):
+    return render(request, "welcome.html")

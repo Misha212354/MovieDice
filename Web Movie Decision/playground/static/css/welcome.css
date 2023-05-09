@@ -1,0 +1,43 @@
+#body{
+    background-color: rgb(72, 91, 104);
+}
+
+#welcome-container {
+    height: 100vh; /* Set the height of the container to the full height of the viewport */
+    display: flex; /* Use flexbox to center the content vertically */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Align content vertically */
+    text-align: center; /* Align content horizontally */
+    
+}
+
+#welcome-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 6rem; /* Set the font size to be large */
+    font-weight: bold; /* Make the text bold */
+    color: white; /* Set the text color to white */
+    text-shadow: 2px 2px 4px #000000; /* Add a slight shadow to the text for a smoother look */
+}
+
+#find-movie-button {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 2rem; /* Add some space between the welcome text and the button */
+    margin: 0 auto;
+    width: 400px;
+    height: 100px;
+    font-size: 2rem; /* Set the font size of the button */
+    font-weight: bold; /* Make the button text bold */
+    background-color: #3498db; /* Set the background color to a shade of blue */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove the button border */
+    border-radius: 0.5rem; /* Add a slight border radius to the button */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+#find-movie-button:hover {
+    background-color: #2980b9; /* Change the background color of the button on hover */
+}
+
+#find-movie-button:active {
+    background-color: #2673a6; /* Change the background color of the button on hover */
+}

@@ -14,7 +14,6 @@ GENRE_CHOICES = [
     ('drama', 'Drama'),
     ('family', 'Family'),
     ('fantasy', 'Fantasy'),
-    ('film-noir', 'Film Noir'),
     ('history', 'History'),
     ('horror', 'Horror'),
     ('music', 'Music'),

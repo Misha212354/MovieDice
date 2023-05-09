@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MovieDice</title>
+        <script src="{% static 'scripts/script.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    </head>
+    
+    <body id="body" class="body">
+        <div id="welcome-container">
+            <h1 id="welcome-text">Welcome to MovieDice!</h1>
+            <button id="find-movie-button" onclick="window.location.href='find_movies/'">Find a movie</button>
+        </div>    
+    </body>
+    
+
+</html>

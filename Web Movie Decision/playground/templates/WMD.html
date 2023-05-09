@@ -4,28 +4,22 @@
 <html>
     <head>
         <title>MovieDice</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/find_movies.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+        <script>
+            function clickButton() {
+              document.getElementById("button2").click();
+            }
+          </script>
     </head>
     
-    <body class="body">
-        
-        <div class="logo">
-            <div class="cube">
-                <div class="face face-front"></div>
-                <div class="face face-back"></div>
-                <div class="face face-left"></div>
-                <div class="face face-right"></div>
-                <div class="face face-top"></div>
-                <div class="face face-bottom"></div>
-            </div>
-        </div>
-        
-        <div class="entire-div">
+    <body id="body" class="body">
+        <div id="entire-div" class="entire-div">
             <div class="left-side">
 
-                <form method="post" action="http://127.0.0.1:8000/playground/crit/">
+                <form method="post" action="http://127.0.0.1:8000/playground/find_movies/">
                     <div class="options"> 
                         <p class="op">Options</p>
                     </div>
@@ -38,7 +32,7 @@
                         <p>Rating {{ form.rating }}</p>
                     </div>
                     <div>
-                        <button class="apply-button", type="submit", name="apply" >Apply</button>
+                        <button class="apply-button" name="appply">Apply</button>
                     </div>
                     
                     
@@ -48,24 +42,41 @@
                 
 
             </div>
-            <div class="right-side">
-                <div class="top-part"><p class="rsd" >{{r}}</p></div>
-                <div class="bottom-part">
-                    <div class="info">
-                        <div class="pic">
-                            <image onerror="this.style.display='none'" class="pic-img" src={{cover}}></image>
+            <div id="right-side" class="right-side">
+                <div id="loading-screen" onclick="window.location.href='find_movies'">
+                    <div id="logo" class="logo">
+                        <div class="cube">
+                            <div class="face face-front"></div>
+                            <div class="face face-back"></div>
+                            <div class="face face-left"></div>
+                            <div class="face face-right"></div>
+                            <div class="face face-top"></div>
+                            <div class="face face-bottom"></div>
                         </div>
-                        <div class="nrg-info">
-                            <p class="rsd">{{title}}</p>
-                            <p class="rsd">{{year}}</p>
-                            <p class="rsd">{{genre}}</p>
-                            <p class="rsd">{{rating}}</p> 
-                        </div>
-                    </div>
-                    <div class="plot">
-                        <p class="pp">{{plot}}</p>
                     </div>
                 </div>
+                
+                <div id="movie-info">
+                    <div class="top-part"><p class="rsd" >{{r}}</p></div>
+                    <div class="bottom-part">
+                        <div class="info">
+                            <div class="pic">
+                                <image onerror="this.style.display='none'" class="pic-img" src={{cover}}></image>
+                            </div>
+                            <div class="nrg-info">
+                                <p class="rsd">{{title}}</p>
+                                <p class="rsd">{{year}}</p>
+                                <p class="rsd">{{genre}}</p>
+                                <p class="rsd">{{rating}}</p> 
+                            </div>
+                        </div>
+                        <div class="plot">
+                            <p class="pp">{{plot}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
 
