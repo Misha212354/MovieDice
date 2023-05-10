@@ -14,14 +14,74 @@
 
 .left-side{
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr 1fr 10fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-bottom: 15px;
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 15px;
     width: 240px;
     border-radius: 25px;
+    
+}
+
+.top-left-part{
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+    border-radius: 25px;
     background-color: antiquewhite;
+
+}
+
+.bottom-left-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: antiquewhite;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.circle{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: 90ms;
+}
+.circle:hover{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.circle:active{
+    width: 30px;
+    height: 30px;
 }
 
 .options,
@@ -83,6 +143,8 @@
     display: grid;
     grid-template-rows: 1fr 1.25fr;
 }
+
+
 
 .info{
     display: flex;
@@ -236,5 +298,4 @@
 }
 
 
-
-
+  

@@ -32,10 +32,8 @@
                         <p>Rating {{ form.rating }}</p>
                     </div>
                     <div>
-                        <button class="apply-button" name="appply">Apply</button>
-                    </div>
-                    
-                    
+                        <button class="apply-button" type="submit" name="appply">Apply</button>
+                    </div> 
                 </form>
                 <br>
 
@@ -43,40 +41,41 @@
 
             </div>
             <div id="right-side" class="right-side">
-                <div id="loading-screen" onclick="window.location.href='find_movies'">
-                    <div id="logo" class="logo">
-                        <div class="cube">
-                            <div class="face face-front"></div>
-                            <div class="face face-back"></div>
-                            <div class="face face-left"></div>
-                            <div class="face face-right"></div>
-                            <div class="face face-top"></div>
-                            <div class="face face-bottom"></div>
-                        </div>
+                <div class="dice-cube">
+                    <div class="dice-face dice-face-one">
+                        <div class="circle"></div>
                     </div>
-                </div>
-                
-                <div id="movie-info">
-                    <div class="top-part"><p class="rsd" >{{r}}</p></div>
-                    <div class="bottom-part">
-                        <div class="info">
-                            <div class="pic">
-                                <image onerror="this.style.display='none'" class="pic-img" src={{cover}}></image>
-                            </div>
-                            <div class="nrg-info">
-                                <p class="rsd">{{title}}</p>
-                                <p class="rsd">{{year}}</p>
-                                <p class="rsd">{{genre}}</p>
-                                <p class="rsd">{{rating}}</p> 
-                            </div>
-                        </div>
-                        <div class="plot">
-                            <p class="pp">{{plot}}</p>
-                        </div>
+                    <div class="dice-face dice-face-two">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
-                </div>
-
-                
+                    <div class="dice-face dice-face-three">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="dice-face dice-face-four">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="dice-face dice-face-five">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <div class="dice-face dice-face-six">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                  </div>
             </div>
         </div>
 

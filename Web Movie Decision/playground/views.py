@@ -8,6 +8,15 @@ from django.shortcuts import redirect
 
 
 socket.setdefaulttimeout(150 * 6000)
+title = 0
+year = 0
+genre = 0
+rating = 0
+plot = 0
+cover = 0
+r = 0
+
+#create generate data function use it for movie
 
 def find_movies(response):
     if response.method == "POST":
@@ -38,7 +47,7 @@ def find_movies(response):
             plot = chosen[4]
             cover = chosen[5]
             r = chosen[6]
-            return render(response, "WMD.html", {"form":form,
+            return render(response, "movie_page.html", {"form":form,
                                                 "title":title, 
                                                 "year":year, 
                                                 "genre":genre, 

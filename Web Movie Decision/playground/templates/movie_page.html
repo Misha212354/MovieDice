@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MovieDice</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/find_movies_movie.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+        
+    </head>
+    
+    <body id="body" class="body">
+
+
+        <div id="entire-div" class="entire-div">
+
+
+            <div class="left-side">
+                <div class="top-left-part">
+                    <div class="square">
+                        <form action="http://127.0.0.1:8000/playground/find_movies/" method="post">
+                            <div class="frm" style="font-family: 'Nunito', sans-serif; display: none;">
+                                {% csrf_token %}
+                                <p>Movie or Series {{ form.movie_series }}</p> 
+                                <p>Genre {{ form.genre }}</p>
+                                <p>Year {{ form.year }}</p>
+                                <p>Rating {{ form.rating }}</p>
+                            </div>
+                            <button class="circle" type="submit">.</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="bottom-left-part">
+                    <form action="">
+                        <button class="change_op_button" type="submit">Change the Options</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="right-side" class="right-side">
+                <div id="movie-info">
+                    <div class="top-part"><p class="rsd" >{{r}}</p></div>
+                    <div class="bottom-part">
+                        <div class="info">
+                            <div class="pic">
+                                <image onerror="this.style.display='none'" class="pic-img" src={{cover}}></image>
+                            </div>
+                            <div class="nrg-info">
+                                <p class="rsd">{{title}}</p>
+                                <p class="rsd">{{year}}</p>
+                                <p class="rsd">{{genre}}</p>
+                                <p class="rsd">{{rating}}</p> 
+                            </div>
+                        </div>
+                        <div class="plot">
+                            <p class="pp">{{plot}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+    
+
+</html>
