@@ -10,4 +10,4 @@ Instructions:
 5. Install IMDbPy library (pip install IMDbPY).
 6. Install Pandas (pip install pandas).
 7. Run Django server (python manage.py runserver 8000).
-8. Go to http://127.0.0.1:8000/playground/crit/
+8. Go to http://127.0.0.1:8000/playground/
